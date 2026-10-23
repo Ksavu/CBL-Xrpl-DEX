@@ -1,0 +1,37 @@
+{
+  "name": "xrpl-dex",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/lib/xrpl/*.test.ts indexer/*.test.ts",
+    "indexer": "tsx indexer/index.ts",
+    "db:init": "tsx indexer/init-db.ts",
+    "test:db": "tsx --test indexer/store.db-test.ts",
+    "smoke": "tsx scripts/testnet-smoke.ts"
+  },
+  "dependencies": {
+    "@crossmarkio/sdk": "^0.4.0",
+    "@gemwallet/api": "^3.8.0",
+    "bignumber.js": "^11.1.5",
+    "lightweight-charts": "^5.2.1",
+    "next": "^16.4.3",
+    "pg": "^8.23.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "server-only": "^0.0.1",
+    "xrpl": "^5.3.0",
+    "xumm": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
